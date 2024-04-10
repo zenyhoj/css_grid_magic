@@ -1,1 +1,25 @@
 https://www.youtube.com/watch?v=BR9CkscCM1I&list=WL&index=1
+
+section {
+
+  
+
+  display: grid;
+  grid-template-columns: minmax(24px, 1fr) min(100% - 24px * 2, 1200px) minmax(
+      24px,
+      1fr
+    );
+  background-color: bisque;
+}
+
+display: grid: This line instructs the element to function as a grid container, establishing a grid formatting context for its content. This means the child elements of this element will be positioned based on the grid definitions we set up.
+
+    grid-template-columns: This property defines the structure of the grid's columns. In your code, it specifies three columns with the following characteristics:
+
+        minmax(24px, 1fr): This defines a minimum width of 24 pixels for the first column. It can also expand to fill the remaining space proportionally along with the other flexible columns (denoted by 1fr).
+
+        min(100% - 24px * 2, 1200px): This defines the second column. It calculates the remaining space after subtracting two margins of 24px each (presumably for the first and third columns) from the total width (100%). This ensures the center column has a minimum width of 1200px but won't overflow the container.
+
+        minmax(24px, 1fr): This mirrors the first column's definition, creating a minimum width of 24 pixels and allowing for proportional expansion.
+
+With this code, you've established a three-column grid layout where the center column takes up most of the space, while the first and third columns act like flexible margins on either side. They'll each be at least 24 pixels wide but can adjust to accommodate the center column's size.
