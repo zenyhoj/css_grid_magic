@@ -1,0 +1,73 @@
+:root {
+  font-size: 62.5%;
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+
+section {
+  /* max-width: 1440px; */
+  /* height: 100dvh; */
+  display: grid;
+  grid-template-columns: minmax(24px, 1fr) min(100% - 24px * 2, 1200px) minmax(
+      24px,
+      1fr
+    );
+  background-color: bisque;
+}
+
+.container {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: 1fr 3fr;
+  grid-column: 2/4; /* this is where the content lives. spans from 2 to 4th column*/
+  grid-gap: 80px;
+  min-height: 600px;
+}
+.text-wrapper {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-items: center;
+  gap: 40px;
+}
+
+.text-wrapper h1 {
+  font-size: 6.4rem;
+}
+.text-wrapper p {
+  font-size: 1.8rem;
+}
+
+.image-wrapper {
+  background-image: url("src/images/girl.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 300px;
+  height: 100%;
+  width: 100%;
+}
+/* affects screen sizes lower than 768px */
+@media screen and (max-width: 768px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column: 2/3;
+    grid-gap: 8px;
+    min-height: 0;
+
+    /* flex-direction: column; */
+  }
+
+  .image-wrapper {
+    order: -1;
+  }
+
+  .text-wrapper {
+    padding: 0;
+  }
+}
