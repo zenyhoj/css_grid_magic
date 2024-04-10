@@ -22,7 +22,7 @@ section {
   justify-items: center;
   align-items: center;
   grid-template-columns: 1fr 3fr;
-  grid-column: 2/4; /* this is where the content lives. spans from 2 to 4th column*/
+  grid-column: 2/3; /* this is where the content lives. spans from 2 to 4th column*/
   grid-gap: 80px;
   min-height: 600px;
 }
